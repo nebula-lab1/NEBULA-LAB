@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:linear-gradient(45deg,#00738c,#81b0b2,#d6ead4,#91bffc,#7596a6) ;
+    background-size: 400%,400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: degrada 5s ease infinite;
+}
+@keyframes degrada{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+
+.caja {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Ga Maamli", sans-serif;
+
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #333;
+}
+
+p {
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+.ball {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #6a5acd, #87cefa);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    animation: pelota 5s infinite linear;
+}
+
+
+@keyframes pelota
+ {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

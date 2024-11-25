@@ -1,0 +1,461 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: white;
+}
+hr{
+    width: 50%;
+}
+a{
+    text-decoration: none;
+    color: #6639a6;
+}
+/*BARRA LATERAL*/
+::-webkit-scrollbar{
+width: 18px;
+}
+::-webkit-scrollbar-track{
+    background: #d1c2e4;
+}
+::-webkit-scrollbar-thumb{
+    background: #6639a6;
+    border-radius: 12px;
+    border: 3px solid #9c8bb3;
+}
+
+
+body{
+    background: #d9cdf1;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+/** Header **/
+#header{
+    width: 100%;
+    position: relative;
+}
+/** Img Header **/
+.img-header{
+    background: url(https://tec.mx/sites/default/files/styles/header_full/public/2018-10/portada-cambioclimatico.jpg?itok=9dZdKlpK);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color:rgba(0,0,0,0.6);
+    background-blend-mode: soft-light;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.img-header .header-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+.img-header .header-info h2{
+    color:#fff;
+    font-size: 70px;
+    font-weight: normal;
+}
+.img-header .header-info hr{
+    border:none;
+    outline: none;
+    height: 2px;
+    background: #fff;
+    width: 600px;
+    margin:15px 0px;
+}
+.img-header .header-info p{
+    color:#fff;
+    font-size: 20px;
+}
+
+
+/* Menú desktop */
+.menu-desktop {
+    display: flex;
+    justify-content: space-between;
+    background-color: #6639a6;
+    padding: 10px 20px;
+}
+
+.menu-desktop .lists {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-desktop .lists li {
+    margin: 0 15px;
+}
+
+.menu-desktop .lists a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu-desktop .lists a.active {
+    background-color: #6639a6;
+    border-radius: 5px;
+}
+
+/* Menú mobile */
+.menu-mobile {
+    display: none; /* Ocultamos el menú hamburguesa inicialmente */
+    background-color: #6639a6;
+    padding: 10px;
+}
+
+.menu-mobile .checkbtn {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-mobile .logo {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.menu-mobile ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #6639a6;
+}
+
+.menu-mobile ul li {
+    border-bottom: 1px solid #6639a6;
+}
+
+.menu-mobile ul a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Mostrar el menú  cuando el checkbox está activado */
+#check:checked ~ ul {
+    display: block;
+}
+
+/* Media query: mostrar solo un menú según el tamaño de la pantalla */
+@media (max-width: 768px) {
+    .menu-desktop {
+        display: none; /* Ocultar menú desktop */
+    }
+
+    .menu-mobile {
+        display: block; /* Mostrar menú mobile */
+    }
+}
+
+
+
+
+/** Main **/
+#main{
+    width: 100%;
+}
+
+/** concepto **/
+.concepto{
+ width: 100%;
+} 
+.concepto h2:hover {
+    color: #201036;
+    font-size:50px ;
+    background-color: #9c8bb3;
+    border-radius:36px;
+    cursor: pointer;
+    transition: 1s;
+}
+.concepto-info{
+    width: 80%;
+    margin:100px auto;
+}
+.concepto-info h2{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: normal;
+    color:#000;
+}
+.concepto-info p{
+    font-size: 19px;
+    color:#000;
+    line-height: 40px;
+    margin:30px 0px;
+    text-align: center;
+}
+.concepto .spacey-img{
+    width: 50%;
+    margin:auto;
+}
+.concepto .spacey-img img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform:rotate(-3deg);
+    cursor: pointer;
+} 
+
+/** frase**/
+.frase{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-top:100px;
+}
+.frase .figure-img{
+    background: url(imagenes/fonfo\ frase.jfif);
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    background-color:rgba(0, 0, 0, 0.5);
+    background-blend-mode: soft-light;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frase .figure-img h4{
+    width: 80%;
+    color:#fff;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 60px;
+}
+.skew-arriba,skew-abajo{
+    display: none;
+}
+/*Teorias de creacion*/
+.teorias:hover{
+background-color: #b47ed8;
+border-radius: 36px;
+}
+i{
+    font-size: medium;
+}
+
+
+/** Go Top **/
+.go-top{
+    position: fixed;
+    bottom:30px;
+    right: 100%;
+    width: 50px;
+    height: 50px;
+    background:#fff;
+    border:3px solid #6639a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.go-top span{
+    font-size:20px;
+    color:#000;
+}
+
+/*AGUJEROS NEGROS*/
+.agimg{
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 30px;
+width: 75%;
+margin: 10%;
+}
+.agimg img{
+    width: 250px;
+    height: 250px;
+    transition: transform 0.3 ease;
+    margin: 0;
+}
+
+.agimg img:hover{
+    width: 300px;
+    height: 100%;
+    box-shadow:-5px 5px 10px #201036;
+    border-radius:20%;
+    transition: 0.5s;
+}
+
+/*CARRUSEL DE IMAGENES*/
+ 
+
+.content-all {
+    height: 120px; 
+    width: 120px;  
+    margin: auto;
+    perspective: 500px; 
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.content-carrousel {
+    width: 100%;
+    position: absolute;
+    animation: rotar 15s infinite linear; 
+    transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+    animation-play-state: paused; 
+    cursor: pointer;
+}
+
+.content-carrousel figure {
+    width: 100%;
+    height: 60px; 
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 10px 0px white; 
+    transition: all 300ms;
+}
+
+.content-carrousel figure:hover {
+    box-shadow: 0px 0px 0px 0px black; 
+    transition: all 300ms;
+}
+
+
+.content-carrousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(150px); }
+.content-carrousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(150px); }
+.content-carrousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(150px); }
+.content-carrousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(150px); }
+.content-carrousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(150px); }
+.content-carrousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(150px); }
+.content-carrousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(150px); }
+.content-carrousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(150px); }
+.content-carrousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(150px); }
+.content-carrousel figure:nth-child(10) { transform: rotateY(360deg) translateZ(150px); }
+
+.content-carrousel img {
+    width: 100%;
+    transition: all 300ms;
+}
+
+.content-carrousel img:hover {
+    transform: scale(1.1); 
+    transition: all 300ms;
+}
+
+
+
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/** Footer **/
+#footer{
+    
+    width:100%;
+    height: 60px;
+    background:#000;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+#footer p{
+    color:#fff;
+    font-size:19px;
+}
+ p::selection {
+    color: white; 
+    background-color: #6639a6; 
+  }
+
+
+/*RESPONSIVO*/
+
+@media(max-width:500px){
+  *{
+    max-width: 500px;
+}  
+p{
+    font-size: 16px;
+}
+h2{
+font-size: 15px;
+}
+h2:hover{
+    font-size: 20px;
+    }
+.concepto .spacey-img{
+    width: 50%;
+    margin:auto;
+}
+/*imagen big-bang*/
+.concepto .spacey-img img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20%;
+    object-fit: cover;
+    transform:rotate(-3deg);
+    cursor: pointer;
+} 
+.agimg img{
+    width: 100%;
+    height: 100px;
+    display: block;
+    transition: transform 0.3 ease;
+   
+}
+.agimg img:hover{
+    width: 120px;
+    height: 100%;
+    box-shadow:-5px 5px 10px #201036;
+    border-radius:20%;
+    transition: 0.5s;
+}
+/*CARRUSEL*/
+
+.content-all {
+    height: 100px; 
+    width: 100px;  
+    margin-top: 100px;
+}
+
+.content-carrousel {
+    animation: rotar 15s infinite linear;
+}
+
+.content-carrousel figure {
+    height: 40px;
+}
+
+.content-carrousel img:hover {
+    transform: scale(1.05); 
+}
+
+.content-all {
+    perspective: 300px; 
+}
+}

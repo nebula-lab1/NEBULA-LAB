@@ -1,0 +1,135 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d8d0ee;
+    font-family: "Montserrat", serif;
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1c2e4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6639a6;
+    border-radius: 12px;
+    border: 3px solid #9c8bb3;
+}
+
+.todo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.titulo {
+    background-color: #6639a6;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+.titulo p {
+    font-size: 36px;
+}
+
+.ficha {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 5px rgba(213, 99, 228, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    box-shadow: #6639a6  4px -4px 12px ;
+    width: 350px;
+    height: 500px;
+    
+}
+
+img {
+    width: 350px;
+    height: 500px;
+    
+}
+
+.datos{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave para aparecer */
+}
+
+.datos h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.datos p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+.ficha:hover .datos {
+    opacity: 1; /* Hace visible el texto cuando el mouse pasa sobre la caja */
+}
+
+.todo:hover > .card:not(:hover) {
+    transform: scale(0.9);
+}
+
+.todo:hover > .ficha:not(:hover) .relleno,
+.todo:hover > .ficha:not(:hover) .datos {
+    filter: brightness(0.5) saturate(1.5) contrast(1.2) blur(10px);
+}
+
+@media(max-width: 500px) {
+   
+   .todo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 90%;
+}
+.ficha {
+    height: 350px; 
+    width: 200px; 
+    margin: auto;
+}
+.relleno img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+h1 {
+    font-size: 40px; 
+    margin: 5px;
+}
+.titulo p{
+    margin: 12px;
+}
+.titulo p {
+    font-size: 24px; 
+    max-width: 100%;
+}
+.relleno {
+    height: 100%;
+    width: 100%;
+}
+}

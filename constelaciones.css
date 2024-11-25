@@ -1,0 +1,105 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: url("https://cdn.pixabay.com/photo/2016/11/21/12/39/stars-1845140_1280.jpg")center top;
+    background-size: cover; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d0e16;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+.pepe{
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    max-width: 80%;
+    text-align: center;
+}
+h1 {
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-family: "Tangerine", cursive;
+    font-size: 80px;
+}
+
+.imagen {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 70%;
+    width: 100%;
+    cursor: pointer;
+    
+}
+
+.imagen-a {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imagen-a img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.imagen-a:hover img {
+    transform: scale(1.1); 
+}
+
+.imagen-a:hover{
+    box-shadow: 2px 2px 20px #525ae7;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    /*ease hace un comienzo lento y acelera*/
+}
+
+.imagen-a:hover .info {
+    opacity: 1; 
+}
+
+
+
+/*Diseño responsivo para celular*/
+ @media (max-width: 480px) {
+   h1{
+       font-size: 60px;
+   }
+   h3{
+       font-size: 15px;
+   }
+   .imagen-a:active img {
+       transform: scale(0.8); 
+   }
+   .imagen {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 20px; 
+       width: 80%;
+   }
+   .imagen-a img {
+       width: 100%;
+       display: block;
+       transition: transform 0.2s ease;
+   } 
+    .imagen-a{
+        max-width: 100%;
+    }
+} 
+
